@@ -10,3 +10,30 @@ mysql> select database();
 | payroll_services |
 +------------------+
 1 row in set (0.00 sec)
+
+mysql> #UC2 Ability to create employee payroll table
+mysql> create table employee_payroll
+    -> (
+    -> id INT unsigned NOT NULL AUTO_INCREMENT,
+    -> name VARCHAR(150) NOT NULL,
+    -> ssalary double NOT NULL,
+    -> ^Clary double NOT NULL,
+mysql> create table employee_payroll
+    -> (
+    -> id INT unsigned NOT NULL AUTO_INCREMENT,
+    -> name VARCHAR(150) NOT NULL,
+    -> salary double NOT NULL,
+    -> start DATE NOT NULL,
+    -> PRIMARY KEY (id));
+Query OK, 0 rows affected (0.25 sec)
+
+mysql> describe employee_payroll;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int unsigned | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(150) | NO   |     | NULL    |                |
+| salary | double       | NO   |     | NULL    |                |
+| start  | date         | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
